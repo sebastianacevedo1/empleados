@@ -14,13 +14,7 @@
         <i class='material-icons'>people</i>
         <h1>Gestión de empleados</h1>
     </div>
-    <div class='acciones'>
-        <i class="material-icons notification-icon">notifications</i>
-        <i class="material-icons settings-icon">settings</i>
-         <div class="user-profile">
-            <img src='user-avatar.png' alt='usuario'>
-         </div>
-    </div>
+
 </header>     
 <!-- encabezado -->
 
@@ -79,9 +73,11 @@ foreach ($empleados as $empleado) {
 <td><?= $empleado["telefono"];?></td>
 <td><?= $empleado["email"];?></td>
 <td><?= $empleado["fechaContratacion"]?></td>
+<td><?= $empleado["cargo"];?></td> 
 <td><?= $empleado["salario"];?></td> 
 <td>
-    <a href="editar.php?id=<?echo $empleado['cedula'] ?>" class="btnEditar">Editar</a>
+    <a href="editar.php?id=<?php echo $empleado['cedula']; ?>" class="btnEditar">Editar</a>
+
 <a href="eliminar.php?cedula=<?= $empleado['cedula'] ?>" class="btnEliminar" onclick="return confirm('¿Seguro que deseas eliminar?');">Eliminar</a>
 
 </tr>
@@ -91,7 +87,64 @@ foreach ($empleados as $empleado) {
     </div>
 </section>
 
+<!-- cumpleaños por mes -->
+<section class = "empleados">
 
+<form action="" method="post">
+<label for="cumple"> cumpleaños por mes:</label>
+<select name="mes" id="cumple">
+    <option value="">Seleccione el mes</option>
+    <option value="1">Enero</option>
+    <option value="2">Febrero</option>
+    <option value="3">Marzo</option>
+    <option value="4">Abril</option>
+    <option value="5">Mayo</option>
+    <option value="6">Junio</option>
+    <option value="7">Julio</option>
+    <option value="8">Agosto</option>
+    <option value="9">Septiembre</option>
+    <option value="10">Octubre</option>
+    <option value="11">Noviembre</option>
+    <option value="12">Diciembre</option>
+</select>
+
+<button type="submi">Enviar mes</button>
+</form>
+<?php include "cumple.php"; ?>
+
+<?php if (!empty($cumplesMes)) { ?>
+    <h2>Cumpleaños del mes seleccionado</h2>
+
+    <?php 
+        $totalCumpleMes = count($cumplesMes);
+        echo "<p>Total de cumpleaños este mes: <strong>$totalCumpleMes</strong></p>";
+    ?>
+
+    <table class="tablaEmpleados">
+        <thead>
+            <tr>
+                <th>Cédula</th>
+                <th>Nombre</th>
+                <th>Fecha de Nacimiento</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach($cumplesMes as $emp) { ?>
+                <tr>
+                    <td><?= $emp['cedula']; ?></td>
+                    <td><?= $emp['primerNombre'] . " " . $emp['primerApellido']; ?></td>
+                    <td><?= $emp['fechaNacimiento']; ?></td>
+                </tr>
+            <?php } ?>
+        </tbody>
+    </table>
+<?php } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') { ?>
+    <p>No hay cumpleaños en este mes.</p>
+<?php } ?>
+
+
+
+</section>
 
 
 

@@ -15,13 +15,7 @@
         <i class='material-icons'>people</i>
         <h1>Gestión de empleados</h1>
     </div>
-    <div class='acciones'>
-        <i class="material-icons notification-icon">notifications</i>
-        <i class="material-icons settings-icon">settings</i>
-         <div class="user-profile">
-            <img src='user-avatar.png' alt='usuario'>
-         </div>
-    </div>
+    
 </header>     
 <!-- encabezado -->
 
