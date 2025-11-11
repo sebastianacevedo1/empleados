@@ -113,7 +113,7 @@ foreach ($empleados as $empleado) {
 <?php include "cumple.php"; ?>
 
 <?php if (!empty($cumplesMes)) { ?>
-    <h2>Cumpleaños del mes seleccionado</h2>
+    <h2><?php echo "Cumpleaños del mes $mesNombre"; ?></h2>
 
     <?php 
         $totalCumpleMes = count($cumplesMes);
