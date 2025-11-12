@@ -141,7 +141,8 @@ foreach ($empleados as $empleado) {
 <?php } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') { ?>
     <p>No hay cumpleaños en este mes.</p>
 <?php } ?>
-
+<br>
+<a href="logout.php">Cerrar sesión</a>
 
 
 </section>

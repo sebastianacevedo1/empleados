@@ -1,3 +1,13 @@
+<?php
+session_start();
+if (!isset($_SESSION["usuario_id"])) {
+    header("Location: login.php");
+    exit();
+}
+?>
+
+
+
 <html lang='es'>
 <head>
     <meta charset="UTF-8">
@@ -82,6 +92,9 @@
             <div class="GB">
                 <button class="btn2">Cancelar</button>
                 <button type="submit" class="btn1">Guardar Empleado</button>
+                <a href="listaempleados.php" class="btn1">Gestionar Empleado</a>
+
+
             </div>
         </section>
 </form>
