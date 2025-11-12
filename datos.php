@@ -15,9 +15,9 @@ require_once "conexion.php";
     $cargo = $_POST["cargo"];
     $sueldo = $_POST["sueldo"];
 
-    $sql = "INSERT INTO persona 
-    (cedula, primerNombre, segundoNombre, primerApellido, segundoApellido, sexo, fechaNacimiento, direccion, telefono, email, fechaContratacion, cargo, salario) 
-    VALUES 
+    $sql = "INSERT INTO persona
+    (cedula, primerNombre, segundoNombre, primerApellido, segundoApellido, sexo, fechaNacimiento, direccion, telefono, email, fechaContratacion, cargo, salario)
+    VALUES
     (:cedula, :nombre1, :nombre2, :apellido1, :apellido2, :sexo, :nacimiento, :domicilio, :tel, :email, :ingreso, :cargo, :sueldo)";
 
     $stmt = $conexion->prepare($sql);

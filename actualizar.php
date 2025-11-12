@@ -3,6 +3,7 @@ require_once "conexion.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+    $id = $_POST["id"];
     $cedula = $_POST["cedula"];
     $nombre1 = $_POST["nombre1"];
     $nombre2 = $_POST["nombre2"];
@@ -18,35 +19,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sueldo = $_POST["sueldo"];
 
     $sql = "UPDATE persona SET
-        primerNombre = ?, 
-        segundoNombre = ?, 
-        primerApellido = ?, 
-        segundoApellido = ?, 
-        sexo = ?, 
-        fechaNacimiento = ?, 
-        direccion = ?, 
-        telefono = ?, 
-        email = ?, 
-        fechaContratacion = ?, 
-        cargo = ?, 
+        cedula = ?,
+        primerNombre = ?,
+        segundoNombre = ?,
+        primerApellido = ?,
+        segundoApellido = ?,
+        sexo = ?,
+        fechaNacimiento = ?,
+        direccion = ?,
+        telefono = ?,
+        email = ?,
+        fechaContratacion = ?,
+        cargo = ?,
         salario = ?
-        WHERE cedula = ?";
+        WHERE id = ?";
 
     $stmt = $conexion->prepare($sql);
     $result = $stmt->execute([
-        $nombre1, 
-        $nombre2, 
-        $apellido1, 
-        $apellido2, 
-        $sexo, 
-        $nacimiento, 
-        $domicilio, 
-        $tel, 
-        $email, 
-        $ingreso, 
-        $cargo, 
+        $cedula,
+        $nombre1,
+        $nombre2,
+        $apellido1,
+        $apellido2,
+        $sexo,
+        $nacimiento,
+        $domicilio,
+        $tel,
+        $email,
+        $ingreso,
+        $cargo,
         $sueldo,
-        $cedula
+        $id
     ]);
 
     if ($result) {

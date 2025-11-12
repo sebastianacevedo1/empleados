@@ -6,11 +6,11 @@ if (!isset($_GET["id"])) {
     exit();
 }
 
-$cedula = $_GET["id"];
+$id = $_GET["id"];
 
-$sql = "SELECT * FROM persona WHERE cedula = ?";
+$sql = "SELECT * FROM persona WHERE id = ?";
 $stmt = $conexion->prepare($sql);
-$stmt->execute([$cedula]);
+$stmt->execute([$id]);
 $empleado = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if (!$empleado) {
@@ -48,10 +48,10 @@ if (!$empleado) {
     
     <div class="formulario">
 
-        <input type="hidden" name="cedula" value="<?= $empleado['cedula'] ?>">
+        <input type="hidden" name="id" value="<?= $empleado['id'] ?>">
 
         <label>Cédula:</label>
-        <input type="text" value="<?= $empleado['cedula'] ?>" disabled>
+        <input type="text" name="cedula" value="<?= $empleado['cedula'] ?>">
 
         <label>Primer Nombre:</label>
         <input type="text" name="nombre1" value="<?= $empleado['primerNombre'] ?>" required>

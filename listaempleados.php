@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION["usuario_id"])) {
+    header("Location: login.php");
+    exit();
+}
+?>
 <html>
 
 <head>
@@ -36,6 +43,7 @@
     <table class="tablaEmpleados">
     <thead>
         <tr>
+            <th>ID</th>
             <th>Cedula</th>
             <th>Primer Nombre</th>
             <th>Segundo Nombre</th>
@@ -62,6 +70,7 @@
 foreach ($empleados as $empleado) {
 ?>
 <tr>
+<td> <?= $empleado["id"]; ?></td>
 <td> <?= $empleado["cedula"]; ?></td>
 <td><?= $empleado["primerNombre"]; ?></td>
 <td><?= $empleado["segundoNombre"]; ?></td>
@@ -73,12 +82,12 @@ foreach ($empleados as $empleado) {
 <td><?= $empleado["telefono"];?></td>
 <td><?= $empleado["email"];?></td>
 <td><?= $empleado["fechaContratacion"]?></td>
-<td><?= $empleado["cargo"];?></td> 
-<td><?= $empleado["salario"];?></td> 
+<td><?= $empleado["cargo"];?></td>
+<td><?= $empleado["salario"];?></td>
 <td>
-    <a href="editar.php?id=<?php echo $empleado['cedula']; ?>" class="btnEditar">Editar</a>
+    <a href="editar.php?id=<?= $empleado['id'] ?>" class="btnEditar">Editar</a>
 
-<a href="eliminar.php?cedula=<?= $empleado['cedula'] ?>" class="btnEliminar" onclick="return confirm('¿Seguro que deseas eliminar?');">Eliminar</a>
+<a href="eliminar.php?id=<?= $empleado['id'] ?>" class="btnEliminar" onclick="return confirm('¿Seguro que deseas eliminar?');">Eliminar</a>
 
 </tr>
 <?php } ?>
@@ -142,7 +151,8 @@ foreach ($empleados as $empleado) {
     <p>No hay cumpleaños en este mes.</p>
 <?php } ?>
 <br>
-<a href="logout.php">Cerrar sesión</a>
+<a href="logout.php" class="btn1">Cerrar sesión</a>
+<a href="index.php" class="btn1">Registrar Empleado</a>
 
 
 </section>

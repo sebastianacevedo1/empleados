@@ -39,7 +39,7 @@ if (!isset($_SESSION["usuario_id"])) {
             <h2>Crear Nuevo Empleado</h2>
             
             <div class="formulario">
-                <label for="cedula">Cedula:</label>
+                <label for="cedula">Cédula:</label>
                 <input id="cedula" type="text" placeholder="CC" name="cedula" required >
 
                 <label for="nombre1">Primer Nombre:</label>

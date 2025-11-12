@@ -16,6 +16,6 @@ if (isset($_GET['id'])) {
     }
 
 } else {
-    echo "No llegó la cédula";
+    echo "No llegó el ID";
 }
 ?>
