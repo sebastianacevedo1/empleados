@@ -57,3 +57,15 @@ button {
 button:hover {
   background-color: #cc2e49;
 }
+
+
+btn1{
+background-color: var(--botones1);
+color: var(--textoPrincipal);
+transition: background-color 0.3s;
+padding: 10px 20px;
+}
+
+.btn1:hover{
+    background-color: var(--hover);
+}

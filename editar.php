@@ -89,8 +89,8 @@ if (!$empleado) {
         <label>Cargo:</label>
         <select name="cargo" required>
             <option value="auxiliar" <?= $empleado['cargo']=="auxiliar" ? "selected" : "" ?>>Auxiliar</option>
-            <option value="gerente" <?= $empleado['cargo']=="gerente" ? "selected" : "" ?>>Gerente General</option>
-            <option value="subgerente" <?= $empleado['cargo']=="subgerente" ? "selected" : "" ?>>Gerente de operaciones</option>
+            <option value="gerente" <?= $empleado['cargo']=="gerente" ? "selected" : "" ?>>Gerente</option>
+            <option value="subgerente" <?= $empleado['cargo']=="subgerente" ? "selected" : "" ?>>subgerente</option>
             <option value="ingeniero" <?= $empleado['cargo']=="ingeniero" ? "selected" : "" ?>>Ingeniero</option>
         </select>
 

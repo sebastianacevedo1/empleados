@@ -16,7 +16,11 @@
       <input type="password" id="password" name="password" required>
 
       <button type="submit">Ingresar</button>
+      <br>
+      <a href="pruebas.php" class="btn1">volver</a>
+
     </form>
   </div>
+  
 </body>
 </html>

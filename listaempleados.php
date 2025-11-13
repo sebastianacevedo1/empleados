@@ -153,6 +153,8 @@ foreach ($empleados as $empleado) {
 <br>
 <a href="logout.php" class="btn1">Cerrar sesión</a>
 <a href="index.php" class="btn1">Registrar Empleado</a>
+<a href="pruebas.php" class="btn1">Dashboard empleados</a>
+
 
 
 </section>
