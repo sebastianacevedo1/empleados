@@ -84,7 +84,7 @@ foreach ($empleados as $empleado) {
 <td><?= $empleado["telefono"];?></td>
 <td><?= $empleado["email"];?></td>
 <td><?= $empleado["fechaContratacion"]?></td>
-<td><?php$" . number_format($fila['salario'], 2, ',', '.') . "?></td>
+<td><?= $empleado["cargo"]?></td>
 <td><?= $empleado["salario"];?></td>
 <td>
     <a href="editar.php?id=<?= $empleado['id'] ?>" class="btnEditar">Editar</a>
