@@ -48,19 +48,19 @@ if (!isset($_SESSION["usuario_id"])) {
             
             <div class="formulario">
                 <label for="cedula">Cédula:</label>
-                <input id="cedula" type="text" placeholder="CC" name="cedula" required >
+                <input id="cedula" type="text" placeholder="CC"pattern="[0123456789]+" title="solo numeros"  name="cedula" required >
 
                 <label for="nombre1">Primer Nombre:</label>
-                <input id="nombre1" type="text" placeholder="ingrese su primer nombre" name="nombre1" required>
+                <input id="nombre1" type="text" placeholder="ingrese su primer nombre"pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" title="solo letras y espacios" name="nombre1" required>
 
                 <label for="nombre2">Segundo Nombre:</label>
-                <input id="nombre2" type="text" placeholder="ingrese su segundo nombre" name="nombre2" required>
+                <input id="nombre2" type="text" placeholder="ingrese su segundo nombre" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" title="solo letras y espacios" name="nombre2" required>
 
                 <label for="apellido1">Primer Apellido:</label>
-                <input id="apellido1" type="text" placeholder="ingrese su primer apellido" name="apellido1" required>
+                <input id="apellido1" type="text" placeholder="ingrese su primer apellido" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" title="solo letras y espacios" name="apellido1" required>
 
                 <label for="apellido2">Segundo apellido:</label>
-                <input id="apellido2" type="text" placeholder="ingrese su segundo apellido" name="apellido2" required>
+                <input id="apellido2" type="text" placeholder="ingrese su segundo apellido" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" title="solo letras y espacios" name="apellido2" required>
 
                 <label for="sexo">Sexo:</label>
                 <select name="sexo" id="sexo" required> 
@@ -76,7 +76,7 @@ if (!isset($_SESSION["usuario_id"])) {
                 <input type="text" id="domicilio" placeholder="calle # . - ." name="domicilio" required>
 
                 <label for="tel">Telefono:</label>
-                <input id="tel" type="tel" name="tel" placeholder="313 0000000" required >
+                <input id="tel" type="tel" name="tel" placeholder="313 0000000" pattern="[0123456789]+" title="solo numeros"required >
 
                 <label for="email">Email:</label>
                 <input id="email" type="email" name="email" required placeholder="ejemplo@gmail.com">
@@ -94,7 +94,7 @@ if (!isset($_SESSION["usuario_id"])) {
                 </select>
 
                 <label for="sueldo">Sueldo basico:</label>
-                <input type="text" id="sueldo" name="sueldo" required>
+                <input type="text" id="sueldo" name="sueldo" pattern="[0123456789]+" title="solo numeros" required>
             </div>
             
             <div class="GB">
