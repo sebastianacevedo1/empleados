@@ -1,0 +1,164 @@
+:root {
+    --fondo: #1e1e1e;
+    --seccion: #252526;
+    --textoPrincipal: #ffffff;
+    --textosecundario: #aaaaaa;
+    --botones1: #ff385c;
+    --hover: #cc2e49;
+    --Cabezataba: #3b3b3b;
+    --inputs: #333333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--fondo);
+    color: var(--textoPrincipal);
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.card {
+    background-color: var(--seccion);
+    border-radius: 12px;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: var(--botones1);
+}
+
+.full-width-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.full-width-card {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    text-align: center;
+    background-color: var(--seccion);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.p1 {
+    font-size: 40px;
+}
+
+/* Tabla de cumpleaños */
+.cumpleanos-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.cumpleanos-table th,
+.cumpleanos-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--Cabezataba);
+}
+
+.cumpleanos-table th {
+    background-color: var(--Cabezataba);
+    color: var(--textosecundario);
+}
+
+.cumpleanos-table tbody td {
+    color: var(--textoPrincipal);
+}
+
+.cumpleanos-table tr:hover {
+    background-color: #2a2a2a;
+}
+
+
+/* Tabla de cumpleaños */
+.cumpleanos-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: var(--seccion);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.cumpleanos-table th,
+.cumpleanos-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--Cabezataba);
+    font-size: 14px;
+}
+
+.cumpleanos-table th {
+    background-color: var(--Cabezataba);
+    color: var(--textosecundario);
+    text-transform: uppercase;
+}
+
+.cumpleanos-table tbody td {
+    color: var(--textoPrincipal);
+}
+
+.cumpleanos-table tr:hover {
+    background-color: #2a2a2a;
+}
+
+/* Ajuste para que la tabla tenga scroll si es muy grande */
+.cumpleanos-table-container {
+    overflow-x: auto;
+    width: 100%;
+    margin-top: 15px;
+}
+
+
+.btn1{
+background-color: var(--botones1);
+color: var(--textoPrincipal);
+transition: background-color 0.3s;
+padding: 10px 20px;
+}
+
+.btn1:hover{
+    background-color: var(--hover);
+}

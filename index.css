@@ -1,0 +1,274 @@
+:root {
+    --fondo: #1e1e1e;       /* Fondo principal oscuro */
+    --seccion: #252526;     /* Fondo de secciones/tarjetas */
+    --textoPrincipal: #ffffff;    /* Color de texto principal */
+    --textosecundario: #aaaaaa;    /* Color de texto secundario/placeholder */
+    --botones1: #ff385c;    /* Color de acento para botones de acción/agregar */
+    --hover: #cc2e49;
+    --Cabezataba: #3b3b3b;  /* Color para la cabecera de la tabla */
+    --inputs: #333333;      /* Fondo de inputs */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body{
+background-color: var(--fondo);
+color: var(--textoPrincipal);
+padding: 20px;
+}
+.contenedor{
+max-width: 1200px;
+margin: 0 auto;
+}
+h1{
+font-size: 24px;
+font-weight: 400;
+}
+h2{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.encabezado{
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: var(--fondo);
+padding: 10px 0;
+border-bottom: 1px solid var(--Cabezataba);
+}
+
+.encabezado2 {
+
+display: flex;
+align-items: center;
+gap: 10px;
+font-size: 24px;
+color: var(--hover)
+}
+
+.acciones .material-icons{
+    color: var(--textosecundario);
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.user-profile img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid var(--hover);
+}
+
+.seccion1{
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-top: 20px 0 30px 0;
+}
+
+.descripcion{
+    color: var(--textosecundario);
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn1{
+background-color: var(--botones1);
+color: var(--textoPrincipal);
+transition: background-color 0.3s;
+padding: 10px 20px;
+}
+
+.btn1:hover{
+    background-color: var(--hover);
+}
+
+.btn2{
+ background-color: var(--fondo);
+ color: var(--textoPrincipal);
+ border: 1px solid var(--textosecundario);
+ padding: 10px 20px;
+ transition: border-color 0.3s;
+}
+.seccionAñadir{
+ background-color: var(--seccion);
+padding: 25px;
+border-radius: 8px;
+margin-bottom: 30px;
+}
+
+.formulario{
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 20px;
+margin-bottom: 30px;
+}
+
+.seccionAñadir input[type="text"],
+.seccionAñadir input[type="email"],
+.seccionAñadir input[type="date"],
+.seccionAñadir input[type="tel"],
+.seccionAñadir select {
+width: 100%;
+padding: 10px;
+border: 1px solid var(--inputs);
+border-radius: 4px;
+background-color: var(--inputs);
+color: var(--text-light);
+font-size: 14px;
+}
+
+
+.seccionAñadir select {
+width: 100%;
+padding: 10px;
+border: 1px solid var(--inputs);
+border-radius: 4px;
+background-color: var(--inputs);
+color: var(--text-light);
+font-size: 14px;
+}
+
+.seccionAñadir input::placeholder {
+    color: var(--text-light);
+    opacity: 0.6;
+}
+
+
+.seccionAñadir input::placeholder {
+color: var(--textosecundario);
+}
+
+.GB {
+display: flex;
+justify-content: flex-end;
+gap: 15px;
+margin-top: 15px;
+}
+.empleados{
+background-color: var(--seccion);
+padding: 25px;
+border-radius: 8px; 
+
+}
+.busqueda{
+display: flex;
+align-items: center;
+background-color: var(--inputs);
+padding: 5px 10px;
+border-radius: 4px;
+max-width: 300px;
+float: right; 
+margin-bottom: 20px;
+}
+
+.busqueda input {
+    border: none;
+    background: none;
+    color: var(--textosecundario);
+    padding: 8px;
+    width: 100%;
+    outline: none;
+}
+.busqueda .material-icons {
+    color: var(--textoPrincipal);
+}
+
+.tablaEmpleados {
+    width: 100%;
+    border-collapse: collapse;
+    clear: both; 
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.tabla-contenedor {
+    max-height: 250px; /* Ajusta según necesites */
+    overflow-y: auto;
+    overflow-x: auto;
+    background: var(--fondo); /* el mismo tono del contenedor */
+    padding: 8px;
+    border-radius: 6px;
+}
+
+
+
+.tablaEmpleados th, 
+.tablaEmpleados td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--Cabezataba);
+    font-size: 14px;
+}
+
+.tablaEmpleados th {
+    background-color: var(--Cabezataba);
+    color: var(--textosecundario);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.tablaEmpleados tr:hover {
+    background-color: #2a2a2a;
+}
+.tablaEmpleados tbody td {
+    color: var(--textoPrincipal);
+}
+.btnEditar i, .btnEliminar i {
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.btnEditar i:hover {
+    background: #4CAF50;
+    color: white;
+}
+
+.btnEliminar i:hover {
+    background: #F44336;
+    color: white;
+}
+.contenedor-tabla {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+
+.tabla-contenedor::-webkit-scrollbar {
+    width: 10px;        
+    height: 10px;       
+}
+
+.tabla-contenedor::-webkit-scrollbar-track {
+    background: #2b2b2b;  /* color del fondo del track */
+    border-radius: 10px;
+}
+
+.tabla-contenedor::-webkit-scrollbar-thumb {
+    background: #ff0055;  /* color de la barra (cámbialo al que quieras) */
+    border-radius: 10px;
+}
+
+.tabla-contenedor::-webkit-scrollbar-thumb:hover {
+    background: #ff336f;  /* color cuando pasas el mouse */
+}
